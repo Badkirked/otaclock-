@@ -20,6 +20,9 @@ public:
   bool hasNewMessage();
   String getNewMessage();
 
+  // 🔥 NEW FUNCTION
+  void showSuccessPage(const String& message, const String& redirectUrl = "/");   // <<< ADD THIS
+
 private:
   ESP8266WebServer _server;
   String*          _scrollMessage;
@@ -42,8 +45,8 @@ private:
   void handleSetTime();
   // Telegram credentials
   void handleSetTelegram();
-  // 🔥 OTA Firmware Update
-  void handleUpdateFirmware();  // <-- *** ADD THIS ***
+  // OTA Firmware Update
+  void handleUpdateFirmware();
 };
 
 #endif // WEBSERVER_H
